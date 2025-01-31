@@ -16,6 +16,18 @@ const testimonials = [
   {
     text: "We highly recommend OnPoint roofing. We just bought a home and found out it needed a new roof. After getting quotes from several roofing companies, we were the most impressed by OnPoint. They had by far the best communication, knowledge, and price. CJ knew exactly what we would need, and he patiently answered the many questions we had. We are so happy with our new roof, and we will be going to OnPoint with any future roofing needs!",
     author: "Sarah Sandeford"
+  },
+  {
+    text: "We had a leak in our ceiling and as a first time homeowner I was nervous. Jim was great at easing my nerves through the whole process. His continuous communication and willingness to answer any questions made me feel really assured. The work was done in no time (here and gone before I got home from work) and he sent me great pics to show me the before and after.",
+    author: "Cynthia Pharis"
+  },
+  {
+    text: "Love supporting locally own small business! These guys are great in what they do!",
+    author: "Josneil Almazan"
+  },
+  {
+    text: "Jacob and his team provided very fast response to hurricane damages sustained by our commercial building. Our repairs required interior and exterior expertise, and On Point excelled in both areas!! Their timely communication made an otherwise stressful period much less so, I will definitely use On Point for our Company's future needs!!!",
+    author: "Michael Mayberry"
   }
 ];
 
