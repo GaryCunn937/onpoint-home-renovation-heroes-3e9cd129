@@ -17,9 +17,6 @@ const Hero = () => {
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
           At ONPOINT Roofing and Renovations, we deliver quality craftsmanship, affordable pricing, and exceptional customer service.
         </p>
-        <p className="text-2xl font-bold italic mb-8 animate-fade-in">
-          What's the point if you're not ONPOINT!
-        </p>
         <div className="flex justify-center gap-8 mb-8 flex-wrap animate-fade-in">
           <div className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,12 +37,6 @@ const Hero = () => {
             <span>Satisfaction Guarantee</span>
           </div>
         </div>
-        <a
-          href="#quote-form"
-          className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block animate-fade-in"
-        >
-          Get Your Free Quote
-        </a>
       </div>
     </div>
   );

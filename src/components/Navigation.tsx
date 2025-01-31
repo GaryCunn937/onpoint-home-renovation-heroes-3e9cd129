@@ -1,36 +1,101 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useMobile } from "@/hooks/use-mobile";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useMobile();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav className="bg-primary text-white py-4 fixed w-full z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="flex items-center">
-          <img src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png" alt="ONPOINT Logo" className="h-12" />
-        </div>
-        
-        <div className="hidden md:flex space-x-8">
-          <a href="#services" className="hover:text-secondary transition-colors">Services</a>
-          <a href="#testimonials" className="hover:text-secondary transition-colors">Testimonials</a>
-          <a href="#quote-form" className="hover:text-secondary transition-colors">Contact</a>
-        </div>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-primary shadow-lg" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <img
+              src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png"
+              alt="ONPOINT Logo"
+              className="h-12"
+            />
+          </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+          {/* Slogan - Only show on desktop and when scrolled */}
+          {!isMobile && (
+            <div className={`text-white font-bold italic transition-opacity duration-300 ${
+              isScrolled ? 'opacity-100' : 'opacity-0'
+            }`}>
+              What's the point if you're not ONPOINT!
+            </div>
+          )}
 
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-primary border-t border-gray-700 animate-fade-in">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="#services" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Services</a>
-            <a href="#testimonials" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Testimonials</a>
-            <a href="#quote-form" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#services" className="text-white hover:text-secondary">
+              Services
+            </a>
+            <a href="#testimonials" className="text-white hover:text-secondary">
+              Testimonials
+            </a>
+            <a href="#quote-form" className="text-white hover:text-secondary">
+              Contact
+            </a>
+          </div>
+
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-white hover:text-secondary"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
-      )}
+
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary">
+              <a
+                href="#services"
+                className="block px-3 py-2 text-white hover:text-secondary"
+                onClick={toggleMenu}
+              >
+                Services
+              </a>
+              <a
+                href="#testimonials"
+                className="block px-3 py-2 text-white hover:text-secondary"
+                onClick={toggleMenu}
+              >
+                Testimonials
+              </a>
+              <a
+                href="#quote-form"
+                className="block px-3 py-2 text-white hover:text-secondary"
+                onClick={toggleMenu}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
