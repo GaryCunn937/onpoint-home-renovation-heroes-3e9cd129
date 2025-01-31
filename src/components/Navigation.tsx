@@ -14,7 +14,7 @@ const Navigation = () => {
         <div className="hidden md:flex space-x-8">
           <a href="#services" className="hover:text-secondary transition-colors">Services</a>
           <a href="#testimonials" className="hover:text-secondary transition-colors">Testimonials</a>
-          <a href="#contact" className="hover:text-secondary transition-colors">Contact</a>
+          <a href="#quote-form" className="hover:text-secondary transition-colors">Contact</a>
         </div>
 
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
@@ -27,7 +27,7 @@ const Navigation = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="#services" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Services</a>
             <a href="#testimonials" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Testimonials</a>
-            <a href="#contact" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
+            <a href="#quote-form" className="hover:text-secondary transition-colors" onClick={() => setIsOpen(false)}>Contact</a>
           </div>
         </div>
       )}
