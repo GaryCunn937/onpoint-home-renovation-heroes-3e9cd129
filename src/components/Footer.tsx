@@ -1,65 +1,58 @@
+import { Phone } from "lucide-react";
+
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Tagline */}
-          <div className="space-y-4">
-            <img src="/lovable-uploads/d0638335-fe28-42a2-9909-f47807b96bb4.png" alt="ONPOINT Logo" className="w-32" />
-            <p className="text-sm">What's the point if you're not ONPOINT!</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="animate-fade-in">
+            <img src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png" alt="ONPOINT Logo" className="h-12 mb-4 hover:scale-105 transition-transform duration-300" />
+            <p className="text-gray-300">What's the point if you're not ONPOINT!</p>
           </div>
-
-          {/* Contact Us */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+          <div className="animate-fade-in [animation-delay:200ms]">
+            <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
             <div className="space-y-2">
-              <p>
-                <a href="tel:+16783259304" className="hover:text-secondary">
-                  Jacob Clayton: (678) 325-9304
-                </a>
-              </p>
-              <p>
-                <a href="tel:+17703177174" className="hover:text-secondary">
-                  David Ridgeway: (770) 317-7174
-                </a>
-              </p>
+              <a href="tel:+16783259304" className="flex items-center hover:text-secondary transition-colors">
+                <Phone className="w-5 h-5 mr-2" />
+                Jacob Clayton: (678) 325-9304
+              </a>
+              <a href="tel:+17703177174" className="flex items-center hover:text-secondary transition-colors">
+                <Phone className="w-5 h-5 mr-2" />
+                David Ridgeway: (770) 317-7174
+              </a>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <div className="animate-fade-in [animation-delay:400ms]">
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li>
-                <a href="#services" className="hover:text-secondary">Services</a>
-              </li>
-              <li>
-                <a href="#testimonials" className="hover:text-secondary">Testimonials</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-secondary">Contact</a>
-              </li>
+              <li><a href="#services" className="hover:text-secondary transition-colors">Services</a></li>
+              <li><a href="#testimonials" className="hover:text-secondary transition-colors">Testimonials</a></li>
+              <li><a href="#contact" className="hover:text-secondary transition-colors">Contact</a></li>
             </ul>
           </div>
-
-          {/* Certifications */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Certifications</h3>
-            <div className="flex space-x-4">
-              <img src="/lovable-uploads/ce06691d-49dd-4dba-a2cc-cb9508faa7c7.png" alt="BBB Certification" className="w-16 h-16" />
-              <img src="/lovable-uploads/bdc415d5-dca6-4977-af42-e4d53c905925.png" alt="GAF Certification" className="w-16 h-16" />
+          <div className="animate-fade-in [animation-delay:600ms]">
+            <h3 className="text-xl font-semibold mb-4">Certifications</h3>
+            <div className="flex justify-center items-center gap-4 -ml-4">
+              <img
+                src="/lovable-uploads/bdc415d5-dca6-4977-af42-e4d53c905925.png"
+                alt="BBB Accredited Business"
+                className="h-16 hover:scale-105 transition-transform duration-300"
+              />
+              <img
+                src="/lovable-uploads/e71ed4ee-36f4-4287-a71e-3eeeae09dc1f.png"
+                alt="GAF Certified Residential Roofing Contractor"
+                className="h-16 hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
-
-        {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm">
-          <p className="mb-2">© 2025 ONPOINT Roofing and Renovations. All Rights Reserved.</p>
-          <p>
-            <a href="#privacy" className="hover:text-secondary">Privacy Policy</a>
+        <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-300 animate-fade-in [animation-delay:800ms]">
+          <p>© 2025 ONPOINT Roofing and Renovations. All Rights Reserved.</p>
+          <div className="mt-2">
+            <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>
             {" | "}
-            <a href="#terms" className="hover:text-secondary">Terms of Service</a>
-          </p>
+            <a href="#" className="hover:text-secondary transition-colors">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
