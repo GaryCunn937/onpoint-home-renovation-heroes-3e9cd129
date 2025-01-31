@@ -16,10 +16,20 @@ const Footer = () => {
                 <Phone className="w-5 h-5 mr-2" />
                 Jacob Clayton: (678) 325-9304
               </a>
-              <a href="tel:+17703177174" className="flex items-center hover:text-secondary transition-colors">
-                <Phone className="w-5 h-5 mr-2" />
-                David Ridgeway: (770) 317-7174
-              </a>
+              <div className="space-y-1">
+                <a href="tel:+17703177174" className="flex items-center hover:text-secondary transition-colors">
+                  <Phone className="w-5 h-5 mr-2" />
+                  David Ridgeway: (770) 317-7174
+                </a>
+                <a 
+                  href="http://www.onpointroofing.net" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="ml-7 text-sm hover:text-secondary transition-colors"
+                >
+                  www.onpointroofing.net
+                </a>
+              </div>
             </div>
           </div>
           <div className="animate-fade-in [animation-delay:400ms]">
