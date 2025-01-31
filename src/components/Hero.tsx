@@ -3,7 +3,7 @@ const Hero = () => {
     <div 
       className="relative min-h-screen flex items-center justify-center text-white pt-16"
       style={{
-        backgroundImage: "url('/lovable-uploads/d0638335-fe28-42a2-9909-f47807b96bb4.webp')",
+        backgroundImage: "url('/lovable-uploads/d0638335-fe28-42a2-9909-f47807b96bb4.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-          Your Trusted Georgia Roofing Partner for Storm Damage Repair & Insurance Claims
+          Your Trusted Partner for Durable Roofs and Stunning Renovations
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
           At ONPOINT Roofing and Renovations, we deliver quality craftsmanship, affordable pricing, and exceptional customer service.
