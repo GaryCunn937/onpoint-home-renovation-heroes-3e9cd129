@@ -1,4 +1,4 @@
-import { Shield, Tool, Home, Cloud, Paintbrush, Gift } from "lucide-react";
+import { Shield, Wrench, Home, Cloud, Paintbrush, Gift } from "lucide-react";
 
 const services = [
   {
@@ -9,7 +9,7 @@ const services = [
   {
     title: "Roof Repair",
     description: "Fix leaks, damaged shingles, and structural issues quickly and affordably.",
-    icon: Tool,
+    icon: Wrench,
   },
   {
     title: "Roof Replacement",
