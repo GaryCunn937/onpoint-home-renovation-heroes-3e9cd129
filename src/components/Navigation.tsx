@@ -36,7 +36,6 @@ const Navigation = () => {
             />
           </div>
 
-          {/* Slogan - Only show on desktop and when scrolled */}
           {!isMobile && (
             <div className={`text-white font-bold italic transition-opacity duration-300 ${
               isScrolled ? 'opacity-100' : 'opacity-0'
@@ -67,7 +66,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-primary">
