@@ -15,11 +15,8 @@ const LeadForm = () => {
         "https://script.google.com/macros/s/AKfycbxxaWDGtcc8T7Bopv9DC6H0NKLhMwDvULTSV-gvtiC23-BrHIanjDMYMkGVDTDT3eyS/exec",
         {
           method: "POST",
-          mode: "no-cors", // Add this to handle CORS
+          mode: "no-cors",
           body: formData,
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
         }
       );
 
