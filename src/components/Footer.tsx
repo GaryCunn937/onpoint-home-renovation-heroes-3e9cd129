@@ -14,11 +14,11 @@ const Footer = () => {
             <div className="space-y-2">
               <a href="tel:+16783259304" className="flex items-center hover:text-secondary transition-colors">
                 <Phone className="w-5 h-5 mr-2" />
-                Jacob: (678) 325-9304
+                Jacob Clayton: (678) 325-9304
               </a>
               <a href="tel:+17703177174" className="flex items-center hover:text-secondary transition-colors">
                 <Phone className="w-5 h-5 mr-2" />
-                David: (770) 317-7174
+                David Ridgeway: (770) 317-7174
               </a>
             </div>
           </div>
