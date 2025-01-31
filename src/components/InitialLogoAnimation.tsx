@@ -6,7 +6,7 @@ const InitialLogoAnimation = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 1500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -14,7 +14,7 @@ const InitialLogoAnimation = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-[1500ms] animate-fade-out">
+    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-[3000ms] animate-fade-out">
       <img
         src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png"
         alt="ONPOINT Logo"
