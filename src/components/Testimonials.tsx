@@ -25,7 +25,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % testimonials.length);
-    }, 8000); // Changed from 5000 to 8000
+    }, 12000); // Changed from 8000 to 12000
 
     return () => clearInterval(interval);
   }, []);
