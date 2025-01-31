@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div className="animate-fade-in [animation-delay:600ms]">
             <h3 className="text-xl font-semibold mb-4">Certifications</h3>
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex justify-center items-center space-x-4">
               <img
                 src="/lovable-uploads/bdc415d5-dca6-4977-af42-e4d53c905925.png"
                 alt="BBB Accredited Business"
