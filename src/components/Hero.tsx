@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-          Your Trusted Partner for Durable Roofs and Stunning Renovations
+          Your Trusted Georgia Roofing & Renovation Experts
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in">
           At ONPOINT Roofing and Renovations, we deliver quality craftsmanship, affordable pricing, and exceptional customer service.
