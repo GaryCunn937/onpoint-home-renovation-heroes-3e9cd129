@@ -68,12 +68,13 @@ const Testimonials = () => {
                 <p className="text-gray-700 mb-4 italic">{testimonial.text}</p>
                 <div className="flex items-center justify-center gap-1">
                   <p className="font-semibold text-primary">{testimonial.author}</p>
-                  <div className="flex text-secondary">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
+                  <div className="flex">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-[#FFD700] text-[#FFD700] drop-shadow-[0_0_2px_rgba(255,215,0,0.5)] transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_4px_rgba(255,215,0,0.8)]"
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
