@@ -13,10 +13,10 @@ const LeadForm = () => {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      // Convert FormData to a plain object
-      const formObject: { [key: string]: string } = {};
+      // Convert FormData directly to URLSearchParams
+      const params = new URLSearchParams();
       formData.forEach((value, key) => {
-        formObject[key] = value.toString();
+        params.append(key, value.toString());
       });
 
       await fetch(
@@ -24,10 +24,7 @@ const LeadForm = () => {
         {
           method: "POST",
           mode: "no-cors",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: new URLSearchParams(formObject).toString(),
+          body: params,
         }
       );
 
