@@ -1,4 +1,4 @@
-import { Phone, Mail } from "lucide-react";
+import { Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Certifications</h3>
             <img
-              src="https://seal-bbb.org/seals/black-seal-200-52-whitetxt-bbb-2c.png"
+              src="/lovable-uploads/bdc415d5-dca6-4977-af42-e4d53c905925.png"
               alt="BBB Accredited Business"
               className="h-16"
             />
