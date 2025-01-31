@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
         </div>
         <a
-          href="#contact"
+          href="#quote-form"
           className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block animate-fade-in"
         >
           Get Your Free Quote
