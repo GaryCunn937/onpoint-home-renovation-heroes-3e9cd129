@@ -10,13 +10,21 @@ const LeadForm = () => {
     setIsSubmitting(true);
 
     try {
-      const formData = new FormData(e.currentTarget);
-      const response = await fetch(
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      
+      // Convert FormData to URL-encoded string
+      const data = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        data.append(key, value.toString());
+      }
+
+      await fetch(
         "https://script.google.com/macros/s/AKfycbxxaWDGtcc8T7Bopv9DC6H0NKLhMwDvULTSV-gvtiC23-BrHIanjDMYMkGVDTDT3eyS/exec",
         {
           method: "POST",
           mode: "no-cors",
-          body: formData,
+          body: data,
         }
       );
 
@@ -26,14 +34,14 @@ const LeadForm = () => {
         title: "Success!",
         description: "Your quote request has been submitted. We'll be in touch soon!",
       });
-      (e.target as HTMLFormElement).reset();
+      form.reset();
     } catch (error) {
+      console.error("Form submission error:", error);
       toast({
         title: "Error",
         description: "There was a problem submitting your request. Please try again.",
         variant: "destructive",
       });
-      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
