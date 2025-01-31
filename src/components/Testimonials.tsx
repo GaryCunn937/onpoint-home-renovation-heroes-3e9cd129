@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -65,7 +66,16 @@ const Testimonials = () => {
             >
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <p className="text-gray-700 mb-4 italic">{testimonial.text}</p>
-                <p className="font-semibold text-primary">{testimonial.author}</p>
+                <div className="flex items-center justify-center gap-1">
+                  <p className="font-semibold text-primary">{testimonial.author}</p>
+                  <div className="flex text-secondary">
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                    <Star className="w-4 h-4 fill-current" />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
