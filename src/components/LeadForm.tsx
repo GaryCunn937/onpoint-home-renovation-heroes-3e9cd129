@@ -11,25 +11,8 @@ const LeadForm = () => {
 
     try {
       const form = e.currentTarget;
-      const formData = new FormData(form);
+      form.submit();
       
-      // Convert FormData directly to URLSearchParams
-      const params = new URLSearchParams();
-      formData.forEach((value, key) => {
-        params.append(key, value.toString());
-      });
-
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbxxaWDGtcc8T7Bopv9DC6H0NKLhMwDvULTSV-gvtiC23-BrHIanjDMYMkGVDTDT3eyS/exec",
-        {
-          method: "POST",
-          mode: "no-cors",
-          body: params,
-        }
-      );
-
-      // Since we're using no-cors, we won't get a proper response status
-      // We'll assume success if the request doesn't throw an error
       toast({
         title: "Success!",
         description: "Your quote request has been submitted. We'll be in touch soon!",
@@ -51,7 +34,13 @@ const LeadForm = () => {
     <section id="quote-form" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Get Your Free Quote Today!</h2>
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
+        <form 
+          id="leadForm"
+          action="https://script.google.com/macros/s/AKfycbxxaWDGtcc8T7Bopv9DC6H0NKLhMwDvULTSV-gvtiC23-BrHIanjDMYMkGVDTDT3eyS/exec"
+          method="POST"
+          onSubmit={handleSubmit}
+          className="max-w-2xl mx-auto space-y-6"
+        >
           <div>
             <input
               type="text"
