@@ -6,7 +6,12 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="animate-fade-in">
-            <img src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png" alt="ONPOINT Logo" className="h-12 mb-4 hover:scale-105 transition-transform duration-300" />
+            <img 
+              src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png" 
+              alt="ONPOINT Logo" 
+              className="h-12 mb-4 hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
             <p className="text-gray-300">What's the point if you're not ONPOINT!</p>
           </div>
           <div className="animate-fade-in [animation-delay:200ms]">
@@ -47,11 +52,13 @@ const Footer = () => {
                 src="/lovable-uploads/bdc415d5-dca6-4977-af42-e4d53c905925.png"
                 alt="BBB Accredited Business"
                 className="h-16 hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
               <img
                 src="/lovable-uploads/e71ed4ee-36f4-4287-a71e-3eeeae09dc1f.png"
                 alt="GAF Certified Residential Roofing Contractor"
                 className="h-16 hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           </div>
