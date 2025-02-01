@@ -11,7 +11,7 @@ const Services = lazy(() => import("@/components/Services"));
 const Testimonials = lazy(() => import("@/components/Testimonials"));
 const LeadForm = lazy(() => import("@/components/LeadForm"));
 
-const Index = () => {
+export default function Index() {
   return (
     <div className="min-h-screen">
       <InitialLogoAnimation />
@@ -30,6 +30,4 @@ const Index = () => {
       <FloatingCTA />
     </div>
   );
-};
-
-export default Index;
+}
