@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
@@ -6,7 +7,7 @@ import {
 } from "@/components/ui/carousel";
 
 const Hero = () => {
-  const [api, setApi] = useState();
+  const [api, setApi] = useState<CarouselApi>();
   
   const images = [
     '/lovable-uploads/8b46acb7-d32c-4ede-b030-cff386e8807f.png',
