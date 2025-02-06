@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import InitialLogoAnimation from "@/components/InitialLogoAnimation";
 import FloatingCTA from "@/components/FloatingCTA";
 import LoadingSpinner from "@/components/ui/LoadingSpinner";
+import RoofMaintenance from "@/components/RoofMaintenance";
 
 // Lazy load larger components
 const Services = lazy(() => import("@/components/Services"));
@@ -20,6 +21,7 @@ export default function Index() {
       <Suspense fallback={<LoadingSpinner />}>
         <Services />
       </Suspense>
+      <RoofMaintenance />
       <Suspense fallback={<LoadingSpinner />}>
         <Testimonials />
       </Suspense>
