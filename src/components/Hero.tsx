@@ -4,11 +4,9 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { useCarousel } from "@/components/ui/carousel";
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [api, setApi] = useState<ReturnType<typeof useCarousel>["api"]>();
+  const [api, setApi] = useState();
   
   const images = [
     '/lovable-uploads/8b46acb7-d32c-4ede-b030-cff386e8807f.png',
@@ -22,14 +20,23 @@ const Hero = () => {
 
     const timer = setInterval(() => {
       api.scrollNext();
+      
+      // Check if we're at the last slide
+      const lastSlideIndex = images.length - 1;
+      if (api.selectedScrollSnap() === lastSlideIndex) {
+        // Reset to first slide after a brief delay
+        setTimeout(() => {
+          api.scrollTo(0);
+        }, 100);
+      }
     }, 7000);
 
     return () => clearInterval(timer);
-  }, [api]);
+  }, [api, images.length]);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center text-white pt-16">
-      <Carousel className="w-full h-full absolute inset-0" setApi={setApi}>
+      <Carousel className="w-full h-full absolute inset-0" setApi={setApi} opts={{ loop: true }}>
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="min-w-0">
