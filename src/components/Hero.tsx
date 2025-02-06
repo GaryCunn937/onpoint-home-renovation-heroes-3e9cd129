@@ -8,12 +8,12 @@ import {
 
 const Hero = () => {
   const [api, setApi] = useState<CarouselApi>();
+  const [showTransition, setShowTransition] = useState(false);
   
   const images = [
     '/lovable-uploads/e17b8df5-e717-4e29-a6d9-cbb6d89a77e0.png',
     '/lovable-uploads/81e091bc-5a39-4955-b8f8-124199baa568.png',
     '/lovable-uploads/73f8f2df-cd3b-497d-807b-cbfd57485628.png',
-    '/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png',
     '/lovable-uploads/eef4684d-63d7-4e81-bec0-99e947ff6ca7.png',
     '/lovable-uploads/4aa0b4be-4169-4838-88da-60896f23365c.png',
     '/lovable-uploads/1dae90f4-7938-4ca3-a49a-3c913aaadfa1.png'
@@ -23,15 +23,19 @@ const Hero = () => {
     if (!api) return;
 
     const timer = setInterval(() => {
-      api.scrollNext();
-      
-      // Check if we're at the last slide
+      const currentIndex = api.selectedScrollSnap();
       const lastSlideIndex = images.length - 1;
-      if (api.selectedScrollSnap() === lastSlideIndex) {
-        // Reset to first slide after a brief delay
+      
+      if (currentIndex === lastSlideIndex) {
+        setShowTransition(true);
         setTimeout(() => {
           api.scrollTo(0);
+          setTimeout(() => {
+            setShowTransition(false);
+          }, 500); // Hide logo after transition
         }, 100);
+      } else {
+        api.scrollNext();
       }
     }, 7000);
 
@@ -52,6 +56,19 @@ const Hero = () => {
           ))}
         </CarouselContent>
       </Carousel>
+      
+      {showTransition && (
+        <div 
+          className="absolute inset-0 bg-white transition-opacity duration-500 flex items-center justify-center z-20"
+          style={{ opacity: '0.8' }}
+        >
+          <img
+            src="/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png"
+            alt="ONPOINT Logo"
+            className="h-32 transition-opacity duration-500"
+          />
+        </div>
+      )}
       
       <div className="absolute inset-0 bg-black opacity-50" />
       
