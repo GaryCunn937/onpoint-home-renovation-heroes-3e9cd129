@@ -1,15 +1,45 @@
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const images = [
+    '/lovable-uploads/8b46acb7-d32c-4ede-b030-cff386e8807f.png',
+    '/lovable-uploads/e17b8df5-e717-4e29-a6d9-cbb6d89a77e0.png',
+    '/lovable-uploads/81e091bc-5a39-4955-b8f8-124199baa568.png',
+    '/lovable-uploads/73f8f2df-cd3b-497d-807b-cbfd57485628.png'
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 7000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div 
-      className="relative min-h-screen flex items-center justify-center text-white pt-16"
-      style={{
-        backgroundImage: "url('/lovable-uploads/d0638335-fe28-42a2-9909-f47807b96bb4.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+    <div className="relative min-h-screen flex items-center justify-center text-white pt-16">
+      <Carousel className="w-full h-full absolute inset-0" selectedIndex={currentSlide}>
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index} className="min-w-0">
+              <div 
+                className="w-full h-screen bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url('${image}')` }}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      
+      <div className="absolute inset-0 bg-black opacity-50" />
+      
       <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
           Your Trusted Georgia Roofing & Renovation Experts
