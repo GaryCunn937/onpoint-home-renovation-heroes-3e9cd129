@@ -13,7 +13,8 @@ const Hero = () => {
     '/lovable-uploads/8b46acb7-d32c-4ede-b030-cff386e8807f.png',
     '/lovable-uploads/e17b8df5-e717-4e29-a6d9-cbb6d89a77e0.png',
     '/lovable-uploads/81e091bc-5a39-4955-b8f8-124199baa568.png',
-    '/lovable-uploads/73f8f2df-cd3b-497d-807b-cbfd57485628.png'
+    '/lovable-uploads/73f8f2df-cd3b-497d-807b-cbfd57485628.png',
+    '/lovable-uploads/83f8781b-0a31-4ed6-b2e5-85817d8df5f6.png'
   ];
 
   useEffect(() => {
