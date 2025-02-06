@@ -4,9 +4,11 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { useCarousel } from "@/components/ui/carousel";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [api, setApi] = useState<ReturnType<typeof useCarousel>["api"]>();
   
   const images = [
     '/lovable-uploads/8b46acb7-d32c-4ede-b030-cff386e8807f.png',
@@ -16,16 +18,18 @@ const Hero = () => {
   ];
 
   useEffect(() => {
+    if (!api) return;
+
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
+      api.scrollNext();
     }, 7000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [api]);
 
   return (
     <div className="relative min-h-screen flex items-center justify-center text-white pt-16">
-      <Carousel className="w-full h-full absolute inset-0" selectedIndex={currentSlide}>
+      <Carousel className="w-full h-full absolute inset-0" setApi={setApi}>
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index} className="min-w-0">
