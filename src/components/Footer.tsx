@@ -13,6 +13,14 @@ const Footer = () => {
               loading="lazy"
             />
             <p className="text-gray-300">What's the point if you're not ONPOINT!</p>
+            <a 
+              href="https://drive.google.com/drive/folders/1YDgQ2TloHa_On2_h0TvTpFo413gklcdM?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-secondary hover:text-white font-semibold transition-colors"
+            >
+              Download Resources →
+            </a>
           </div>
           <div className="animate-fade-in [animation-delay:200ms]">
             <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
