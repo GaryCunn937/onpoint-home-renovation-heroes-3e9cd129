@@ -8,6 +8,9 @@ const DesktopNav = () => {
       <a href="#testimonials" className="text-white hover:text-secondary">
         Testimonials
       </a>
+      <a href="#faq" className="text-white hover:text-secondary">
+        FAQ
+      </a>
       <a href="#quote-form" className="text-white hover:text-secondary">
         Contact
       </a>

@@ -1,3 +1,4 @@
+
 import { Menu, X } from "lucide-react";
 
 interface MobileMenuProps {
@@ -33,6 +34,13 @@ const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
               onClick={toggleMenu}
             >
               Testimonials
+            </a>
+            <a
+              href="#faq"
+              className="block px-3 py-2 text-white hover:text-secondary"
+              onClick={toggleMenu}
+            >
+              FAQ
             </a>
             <a
               href="#quote-form"
