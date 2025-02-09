@@ -1,3 +1,4 @@
+
 import { Phone } from "lucide-react";
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-block mt-4 text-secondary hover:text-white font-semibold transition-colors"
             >
-              Download Resources →
+              Download Resources
             </a>
           </div>
           <div className="animate-fade-in [animation-delay:200ms]">
