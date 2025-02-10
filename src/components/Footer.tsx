@@ -52,7 +52,7 @@ const Footer = () => {
               <li><a href="#services" className="hover:text-secondary transition-colors">Services</a></li>
               <li><a href="#testimonials" className="hover:text-secondary transition-colors">Testimonials</a></li>
               <li><a href="#faq" className="hover:text-secondary transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-secondary transition-colors">Contact</a></li>
+              <li><a href="#quote-form" className="hover:text-secondary transition-colors">Contact</a></li>
             </ul>
           </div>
           <div className="animate-fade-in [animation-delay:600ms]">
