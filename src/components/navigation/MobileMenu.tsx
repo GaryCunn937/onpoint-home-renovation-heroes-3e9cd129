@@ -49,6 +49,15 @@ const MobileMenu = ({ isOpen, toggleMenu }: MobileMenuProps) => {
             >
               Contact
             </a>
+            <a
+              href="https://drive.google.com/drive/folders/1YDgQ2TloHa_On2_h0TvTpFo413gklcdM?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 text-white hover:text-secondary"
+              onClick={toggleMenu}
+            >
+              Download Resources
+            </a>
           </div>
         </div>
       )}
